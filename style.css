@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f4ef;
+  color: #4b342b;
+}
+
+.site {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 28px 6vw 70px;
+  background: linear-gradient(135deg, #fffaf5, #efe0d8);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  display: block;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #b88b58;
+}
+
+.navButton,
+.primary,
+.secondary,
+.product a {
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 14px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.navButton,
+.primary,
+.product a {
+  background: #8e6758;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #8e6758;
+  color: #8e6758;
+  background: white;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #9b7b6d;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: 0.95;
+  margin: 14px 0 22px;
+}
+
+h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  margin: 10px 0 30px;
+}
+
+.subtitle,
+.about p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #6b564d;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 32px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.features div,
+.infoBox p {
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(75, 52, 43, 0.08);
+}
+
+.heroCard {
+  position: relative;
+}
+
+.heroCard img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 36px;
+  box-shadow: 0 22px 60px rgba(75, 52, 43, 0.22);
+}
+
+.priceCard {
+  position: absolute;
+  left: -24px;
+  bottom: -24px;
+  background: white;
+  border-radius: 28px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(75, 52, 43, 0.18);
+}
+
+.priceCard span {
+  color: #9b7b6d;
+  font-size: 14px;
+}
+
+.priceCard strong {
+  display: block;
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.priceCard p {
+  color: #8e6758;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.section {
+  padding: 80px 6vw;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.product {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(75, 52, 43, 0.08);
+}
+
+.product img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.productBody {
+  padding: 24px;
+}
+
+.productBody h3 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.productBody p {
+  color: #8e6758;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.about {
+  background: white;
+  padding: 80px 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.infoBox {
+  display: grid;
+  gap: 16px;
+}
+
+footer {
+  background: #8e6758;
+  color: white;
+  padding: 34px 6vw;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.85;
+}
+
+@media (max-width: 850px) {
+  .heroGrid,
+  .products,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCard img {
+    height: 380px;
+  }
+
+  .priceCard {
+    left: 16px;
+    right: 16px;
+  }
+
+  .nav {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+}
